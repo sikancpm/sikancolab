@@ -1,0 +1,107 @@
+body {
+    background: radial-gradient(circle, #0f0f0f, #000000);
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+header {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px #ff00ff;
+}
+.logo {
+    color: #00ffff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+}
+.option-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff00ff;
+    transition: transform 0.3s;
+}
+.option-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00ffff;
+}
+.form-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ff00ff;
+    max-width: 500px;
+    margin: 3rem auto;
+    text-align: center;
+    animation: fadeIn 1s;
+}
+.creator-photo {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00ffff;
+    margin-bottom: 1rem;
+}
+form input, form textarea, form button {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff00ff;
+    outline: none;
+}
+form button {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #00ffff;
+}
+.exit-button {
+    display: inline-block;
+    background: red;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    text-decoration: none;
+    box-shadow: 0 0 10px red;
+    transition: transform 0.3s;
+}
+.exit-button:hover {
+    transform: scale(1.1);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Adaptación a pantallas */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    .option-button {
+        width: 80%;
+        margin: 0.5rem auto;
+    }
+}
+@media (max-width: 480px) {
+    .option-button {
+        width: 90%;
+        padding: 0.8rem;
+    }
+    .form-container {
+        padding: 1rem;
+    }
+    form input, form textarea, form button {
+        padding: 0.8rem;
+    }
+}
