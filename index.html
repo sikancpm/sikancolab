@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaboraciones - Car Parking Multiplayer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Colaboraciones en Car Parking Multiplayer</h1>
+        <nav>
+            <button id="login-btn">Iniciar Sesión</button>
+            <div id="user-menu" class="hidden">
+                <span id="user-initials">JD</span>
+                <ul>
+                    <li><a href="#">Editar Perfil</a></li>
+                    <li><a href="#">Configuraciones</a></li>
+                    <li><a href="#" id="logout-btn">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="creadores">
+            <h2>Selecciona un creador para colaborar</h2>
+            <div class="creador" data-name="Creador1">
+                <img src="creador1.jpg" alt="Creador 1">
+                <p>Creador 1</p>
+                <button class="solicitar-btn">Solicitar Colaboración</button>
+            </div>
+            <div class="creador" data-name="Creador2">
+                <img src="creador2.jpg" alt="Creador 2">
+                <p>Creador 2</p>
+                <button class="solicitar-btn">Solicitar Colaboración</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="solicitud-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Solicitar colaboración con <span id="creador-nombre"></span></h3>
+            <form id="solicitud-form">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" required></textarea>
+                <button type="submit">Enviar Solicitud</button>
+                <button type="button" id="cerrar-modal">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
