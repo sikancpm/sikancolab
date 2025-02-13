@@ -1,78 +1,67 @@
 body {
-    background: radial-gradient(circle, #0f0f0f, #000000);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
-    overflow-x: hidden;
+    text-align: center;
 }
+
 header {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 15px #ff00ff;
+    background-color: #111;
+    padding: 20px;
 }
-.logo {
-    color: #00ffff;
-    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
 }
-.option-button {
-    display: inline-block;
-    background: #1e1e2f;
+
+button {
+    background-color: #ff5722;
     color: white;
-    border: 2px solid;
-    border-image: linear-gradient(45deg, #ff00ff, #00ffff) 1;
-    padding: 1rem 2rem;
-    margin: 1rem;
-    border-radius: 30px;
+    border: none;
+    padding: 10px 15px;
     cursor: pointer;
-    box-shadow: 0 0 20px #ff00ff;
-    transition: transform 0.3s, border 1s;
+    border-radius: 5px;
 }
-.option-button:hover {
-    transform: scale(1.1);
-    border-image: linear-gradient(45deg, #00ffff, #ff00ff) 1;
-    box-shadow: 0 0 30px #00ffff;
+
+button:hover {
+    background-color: #e64a19;
 }
-.form-container {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #ff00ff;
-    width: 300px;
-    margin: 50px auto;
-    text-align: center;
+
+.creador {
+    display: inline-block;
+    margin: 20px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
 }
-.form-container input {
+
+.creador img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #444;
+    padding: 20px;
     border-radius: 10px;
-    border: none;
 }
-.form-container button {
-    background: linear-gradient(45deg, #ff00ff, #00ffff);
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    box-shadow: 0 0 10px #00ffff;
-}
-.form-container button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px #ff00ff;
-}
-.form-container .exit-button {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #00ffff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-.form-container .exit-button:hover {
-    color: #ff00ff;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+
+.hidden {
+    display: none;
 }
