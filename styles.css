@@ -1,67 +1,157 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
     margin: 0;
     padding: 0;
-    background-color: #222;
-    color: white;
-    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #111;
-    padding: 20px;
-}
-
-nav {
     display: flex;
-    justify-content: flex-end;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-button {
-    background-color: #ff5722;
+.hamburger-menu {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #555;
     color: white;
     border: none;
-    padding: 10px 15px;
     cursor: pointer;
-    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover {
-    background-color: #e64a19;
+.auth-buttons button:hover {
+    background-color: #777;
 }
 
-.creador {
-    display: inline-block;
-    margin: 20px;
-    background-color: #333;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.creador img {
-    width: 100px;
-    border-radius: 50%;
-}
-
-.modal {
-    position: fixed;
-    top: 0;
+.hamburger-options {
+    display: none;
+    background-color: #444;
+    padding: 10px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 50px;
     left: 0;
+    width: 200px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hamburger-options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-options li {
+    margin: 10px 0;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.profile, .community, .social-media, .support, .buymeacoffee-page {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.profile h2, .community h2, .social-media h2, .support h2, .buymeacoffee-page h2 {
+    margin-top: 0;
+}
+
+.social-button, .paypal-button, .back-button {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-button:hover, .paypal-button:hover, .back-button:hover {
+    transform: scale(1.1);
+}
+
+.tiktok {
+    background-color: #69C9D0;
+}
+
+.youtube {
+    background-color: #FF0000;
+}
+
+.telegram {
+    background-color: #0088CC;
+}
+
+.paypal-button {
+    background-color: #FFDD00;
+    color: #333;
+}
+
+.back-button {
+    background-color: #555;
+}
+
+.support-form input, .support-form textarea {
+    display: block;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.support-form .checkbox {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.modal-content {
-    background: #444;
-    padding: 20px;
-    border-radius: 10px;
+.support-form .checkbox input {
+    margin-right: 10px;
 }
 
-.hidden {
-    display: none;
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #555;
+}
+
+.dark-mode .auth-buttons button {
+    background-color: #777;
+}
+
+.dark-mode .auth-buttons button:hover {
+    background-color: #999;
+}
+
+.dark-mode .hamburger-options {
+    background-color: #333;
+}
+
+.dark-mode .profile, .dark-mode .community, .dark-mode .social-media, .dark-mode .support, .dark-mode .buymeacoffee-page {
+    background-color: #444;
 }

@@ -3,53 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colaboraciones - Car Parking Multiplayer</title>
+    <title>Sikan.dev</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Colaboraciones en Car Parking Multiplayer</h1>
-        <nav>
-            <button id="login-btn">Iniciar Sesión</button>
-            <div id="user-menu" class="hidden">
-                <span id="user-initials">JD</span>
-                <ul>
-                    <li><a href="#">Editar Perfil</a></li>
-                    <li><a href="#">Configuraciones</a></li>
-                    <li><a href="#" id="logout-btn">Cerrar Sesión</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="hamburger-menu">☰</div>
+        <div class="title">Sikan.dev</div>
+        <div class="auth-buttons">
+            <button>Login</button>
+            <button>Sign Up</button>
+            <button id="theme-toggle">Dark/Light</button>
+        </div>
     </header>
 
+    <nav class="hamburger-options">
+        <ul>
+            <li>Genre</li>
+            <li>Songs</li>
+            <li>Artist</li>
+            <li>Albums</li>
+        </ul>
+    </nav>
+
     <main>
-        <section id="creadores">
-            <h2>Selecciona un creador para colaborar</h2>
-            <div class="creador" data-name="Creador1">
-                <img src="creador1.jpg" alt="Creador 1">
-                <p>Creador 1</p>
-                <button class="solicitar-btn">Solicitar Colaboración</button>
-            </div>
-            <div class="creador" data-name="Creador2">
-                <img src="creador2.jpg" alt="Creador 2">
-                <p>Creador 2</p>
-                <button class="solicitar-btn">Solicitar Colaboración</button>
-            </div>
-        </section>
+        <div class="profile">
+            <h2>Profile</h2>
+            <p>Sikan CPM</p>
+            <p>sikanoficial2@gmail.com</p>
+            <p>¡Hola, soy Sikan! Desarrollador web. Siempre enfocado en transformar ideas en soluciones digitales innovadoras.</p>
+        </div>
+
+        <div class="community">
+            <h2>Comunidad</h2>
+            <p>Discord</p>
+            <button onclick="window.location.href='https://discord.gg/zZywGWFJrD'">Unirme →</button>
+        </div>
+
+        <div class="social-media">
+            <h2>Redes Sociales</h2>
+            <button class="social-button tiktok" onclick="window.location.href='https://www.tiktok.com'">TikTok</button>
+            <button class="social-button youtube" onclick="window.location.href='https://www.youtube.com'">YouTube</button>
+            <button class="social-button telegram" onclick="window.location.href='https://telegram.org'">Telegram</button>
+        </div>
+
+        <div class="support">
+            <h2>Buyme a Coffee</h2>
+            <button class="paypal-button" onclick="window.location.href='donar.html'">Buyme a Coffee</button>
+            <p>Para la bebida de los live</p>
+            <p>Para comprarme detalles y poder apoyar a la comunidad</p>
+        </div>
     </main>
 
-    <div id="solicitud-modal" class="modal hidden">
-        <div class="modal-content">
-            <h3>Solicitar colaboración con <span id="creador-nombre"></span></h3>
-            <form id="solicitud-form">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" required></textarea>
-                <button type="submit">Enviar Solicitud</button>
-                <button type="button" id="cerrar-modal">Cancelar</button>
-            </form>
-        </div>
-    </div>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
 
-    <script src="script.js"></script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const hamburgerOptions = document.querySelector('.hamburger-options');
+        hamburgerMenu.addEventListener('click', () => {
+            hamburgerOptions.style.display = hamburgerOptions.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 </body>
 </html>
